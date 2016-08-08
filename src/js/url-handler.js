@@ -148,7 +148,7 @@ var urlHandler = {
       document.getElementById("sg-viewport").contentWindow.postMessage(obj, urlHandler.targetOrigin);
     } else {
       // add to the history
-      var addressReplacement = (window.location.protocol == "file:") ? null : window.location.protocol+"//"+window.location.host+window.location.pathname.replace("index.html","")+"?p="+pattern;
+      var addressReplacement = (window.location.protocol == "file:") ? null : window.location.protocol+"//"+window.location.host+window.location.pathname+"?p="+pattern;
       if (history.pushState !== undefined) {
         history.pushState(data, null, addressReplacement);
       }
